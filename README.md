@@ -25,7 +25,18 @@ Distance: 90.2 NM
 
 `success` means the simulated mission completed under those assumptions. `Distance` is the distance accumulated along the simulated flight profile and can differ from the input stage length. If the mission ends early, the example prints the reason when available.
 
-To try a different mission, change `stage_nm` in [examples/simulate.rs](examples/simulate.rs) and rerun the Cargo command. The example passes a `SimulationInput` to `build_profile_dynamic`. Its result also contains the full flight profile, energy and fuel totals, and mass breakdown. See the [mission input guide](docs/inputs.md) for units, defaults, and propulsion settings.
+### Change the mission inputs
+
+The [20-seat liquid hydrogen fuel cell example](examples/fc-20seat-lh2-300nm.json) lists every mission input in the public Rust model. It captures the physical settings of the TRACE frontend’s 300 NM startup scenario. Copy it to your own file, edit the values, and pass its path after `--`.
+
+```sh
+cp examples/fc-20seat-lh2-300nm.json my-mission.json
+cargo run --locked --example simulate -- my-mission.json
+```
+
+For example, edit `stage_nm` to change the route length in nautical miles. Keep the complete file to preserve the scenario settings. If you omit a field, the runner uses the Rust library default for that field.
+
+In Rust code, you can set the same fields directly on `SimulationInput`. See the [mission input guide](docs/inputs.md) for field meanings, units, and propulsion settings.
 
 See [the engine guide](docs/engine.md) for module boundaries and [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution workflow.
 
