@@ -1,4 +1,4 @@
-# TRACE Engine
+# TRACE
 
 TRACE (Techno-Economic Regional Aircraft Concept Explorer) is a Rust engine for exploring regional aircraft concepts. This edition models flight missions, propulsion, energy use, aircraft sizing, and mission feasibility. Use it for conceptual studies and comparisons. Results require independent validation for operational or certification decisions.
 
@@ -22,4 +22,4 @@ See [the engine guide](docs/engine.md) for module boundaries and [CONTRIBUTING.m
 
 ## License
 
-A project license has yet to be selected. Before making the repository public for reuse, confirm redistribution rights for the code and technology data and add the approved license text.
+TRACE is licensed under the [European Union Public Licence v1.2](LICENSE) (EUPL-1.2).
