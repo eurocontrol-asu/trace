@@ -1,6 +1,10 @@
 # TRACE
 
-TRACE (Techno-Economic Regional Aircraft Concept Explorer) is a Rust engine for exploring regional aircraft concepts. This edition models flight missions, propulsion, energy use, aircraft sizing, and mission feasibility. Use it for conceptual studies and comparisons. Results require independent validation for operational or certification decisions.
+TRACE (Techno-Economic Regional Aircraft Concept Explorer) is a Rust engine for simulating flight missions and sizing regional aircraft concepts.
+
+TRACE uses a **stateful mission simulation**. At each timestep, it uses the aircraft’s current speed, altitude, remaining energy, and temperatures to compute the next state. The effects of earlier flight phases carry forward. For example, energy used during climb reduces what is available for cruise and any subsequent hold.
+
+This lets you assess whether a concept can complete a mission under the chosen assumptions, see where it reaches a limit, and explore how changes to the aircraft or mission affect the result. TRACE is intended for conceptual studies and comparisons. Results require independent validation for operational or certification decisions.
 
 ## Run a mission
 
