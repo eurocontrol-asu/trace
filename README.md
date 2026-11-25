@@ -16,6 +16,8 @@ The example uses `SimulationInput` to describe a mission and calls
 mass breakdown, and termination status. Inspect `end_reason` and
 `end_reason_detail` to understand how the simulation ended.
 
+Use the [mission input guide](docs/inputs.md) to configure aircraft, propulsion, and flight conditions.
+
 See [the engine guide](docs/engine.md) for module boundaries and [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution workflow.
 
 ## License
